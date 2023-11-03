@@ -1,4 +1,4 @@
-package br.borba.cleanmvvm.presenter
+package br.borba.cleanmvvm.clean.presenter
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
