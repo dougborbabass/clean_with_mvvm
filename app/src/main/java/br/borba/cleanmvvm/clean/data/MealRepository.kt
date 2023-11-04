@@ -9,7 +9,9 @@ import br.borba.cleanmvvm.network.parseResponse
 class MealRepositoryImpl(
     private val service: MealApi
 ) : MealRepository {
+
     override suspend fun getCategories(): List<CategoryModel> {
+
         val result = service.getCategories().parseResponse()
 
         return when (result) {
@@ -20,11 +22,9 @@ class MealRepositoryImpl(
                     it.toCategory()
                 }
             }
-
             is Output.Failure -> throw GetCategoriesException()
         }
     }
-
 }
 
 interface MealRepository {
