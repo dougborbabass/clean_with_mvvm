@@ -78,6 +78,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
+    implementation("io.coil-kt:coil:1.1.1")
 
     val nav_version = "2.7.4"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")

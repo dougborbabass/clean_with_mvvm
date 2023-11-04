@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import br.borba.cleanmvvm.clean.presenter.adapter.CategoriesAdapter
 import br.borba.cleanmvvm.clean.presenter.model.CategoryUiModel
 import br.borba.cleanmvvm.clean.presenter.viewmodel.MealViewModel
 import br.borba.cleanmvvm.databinding.FragmentMealBinding
@@ -17,7 +18,7 @@ class MealFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentMealBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -33,6 +34,6 @@ class MealFragment : Fragment() {
     }
 
     private fun populateMealsCategory(categories: List<CategoryUiModel>) {
-
+        binding.rvMeals.adapter = CategoriesAdapter(categories)
     }
 }
