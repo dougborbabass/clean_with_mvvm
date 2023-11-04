@@ -1,4 +1,4 @@
-package br.borba.cleanmvvm.clean.presenter
+package br.borba.cleanmvvm.clean.presenter.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
